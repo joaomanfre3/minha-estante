@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-lora), ui-serif, Georgia, serif;
+
+  /* Tema "biblioteca": claro com acento verde-floresta. Identidade própria. */
+  --color-ink: #1c2b24;
+  --color-accent: #15803d; /* verde */
+  --color-paper: #f4f6f3;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  min-height: 100dvh;
+  color: var(--color-ink);
+  background:
+    radial-gradient(80% 50% at 50% -10%, #dcefe1 0%, transparent 65%),
+    var(--color-paper);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: #bbf7d0;
+  color: #1c2b24;
+}
+
+/* Sombra de "livro" nas capas */
+.book-shadow {
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.35);
+}
